@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>截图demo</title>
+    <style>
+        .main-picture{
+            background:#ffd182;
+            background-size: 100% 100%;
+            padding: 15px;
+            height: 500px;
+        }
+        .main-picture .main-picture_user{
+            display: flex;
+        }
+        .main-picture .main-picture_user .user-icon{
+            width: 30px;
+            height: 30px;
+            border-radius:50% ;
+            border: 1px solid rgba(255,253,217,.9);
+            margin-right: 12px;
+        }
+        .main-picture .main-picture_user .user-detail{
+            flex: 1;
+            background:rgba(255,255,255,.3);
+            padding: 15px 12px;
+            border-radius: 4px;
+            color: #666666;
+            position:relative ;
+        }
+        .main-picture .main-picture_user .user-detail:before{
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 8px;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-right: 5px solid rgba(255,255,255,.3);
+
+        }
+        .main-picture .main-picture_user .user-detail strong{
+            font-size: 15px;
+        }
+        .main-picture .main-picture_user .user-detail p{
+            margin: 0;
+            font-size: 13px;
+        }
+        button{
+            width: 100%;
+            padding: 17px;
+            background: #d0ac83;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            left: 0px;
+            font-size: 17px;
+            border: 0px;
+        }
+        .photoStyle {
+            /* width: 100%; */
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 530px;
+            -webkit-transition: -webkit-transform .4s ease;
+            transition: -webkit-transform .4s ease;
+            transition: transform .4s ease;
+            transition: transform .4s ease,-webkit-transform .4s ease;
+            -webkit-transform-origin: center top;
+            transform-origin: center top;
+        }
+    </style>
+</head>
+<body>
+        <div class="main-picture" >
+                <div class="main-picture_user">
+                    <img class="user-icon" src="" alt="" crossorigin="anonymous">
+                    <div class="user-detail">
+                        <strong>Hi, millet</strong>
+                        <p>The great thing in this world is not so much where you stand,as in what direction you are moving</p>
+                    </div>
+                </div>
+        
+            </div>
+
+            <button class="save"> savePicture</button>
+    <script type="text/javascript" src="./jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="./html2canvas.min.js"></script>
+    <script type="text/javascript">
+    $(".save").on('click',function(){
+   
+      html2canvas(document.querySelector(".main-picture"),{
+    
+        useCORS:true,//设置可以素材可以跨域，移动端不兼容
+    
+        allowTaint: false,//默认就是false，允许跨域
+    
+        taintTest: true,//默认就是false，是否在渲染前测试图片
+        
+        scale:window.devicePixelRatio,//解决清晰度的问题可以改变scale的值
+        
+        }).then(canvas => { 
+        
+        var dataUrl = canvas.toDataURL();
+        console.log(dataUrl)
+        
+        var newImg = document.createElement("img");
+        newImg.style='aa'
+        
+        newImg.src =  dataUrl;
+        newImg.classList.add('photoStyle')
+        document.body.appendChild(newImg);
+        $('.photoStyle').css({
+            'display': 'inline',
+            'transform': 'translateY(12px) scale(1.01161)'
+        })
+         $(".main-picture").hide()
+
+        });
+       
+    })
+
+
+
+    </script>
+</body>
+</html>
