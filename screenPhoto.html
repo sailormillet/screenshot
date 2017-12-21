@@ -60,16 +60,16 @@
         }
         .photoStyle {
             /* width: 100%; */
-            position: relative;
+            /* position: relative;
             top: 0;
-            left: 0;
+            left: 0; */
             height: 530px;
-            -webkit-transition: -webkit-transform .4s ease;
+            /* -webkit-transition: -webkit-transform .4s ease;
             transition: -webkit-transform .4s ease;
             transition: transform .4s ease;
             transition: transform .4s ease,-webkit-transform .4s ease;
             -webkit-transform-origin: center top;
-            transform-origin: center top;
+            transform-origin: center top; */
         }
     </style>
 </head>
@@ -89,9 +89,10 @@
     <script type="text/javascript" src="./jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="./html2canvas.min.js"></script>
     <script type="text/javascript">
+    let clickTime =0;
     $(".save").on('click',function(){
-   
-      html2canvas(document.querySelector(".main-picture"),{
+        if(clickTime == 0){
+            html2canvas(document.querySelector(".main-picture"),{
     
         useCORS:true,//设置可以素材可以跨域，移动端不兼容
     
@@ -112,13 +113,18 @@
         newImg.src =  dataUrl;
         newImg.classList.add('photoStyle')
         document.body.appendChild(newImg);
-        $('.photoStyle').css({
-            'display': 'inline',
-            'transform': 'translateY(12px) scale(1.01161)'
-        })
+        // $('.photoStyle').css({
+        //     'display': 'inline',
+        //     'transform': 'translateY(12px) scale(1.01161)'
+        // })
          $(".main-picture").hide()
-
+         clickTime =1
         });
+        }else{
+            alert('你已经生成一张截图了，请刷新页面')
+        }
+   
+
        
     })
 
