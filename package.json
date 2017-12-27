@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/sailormillet/screenshot#readme",
   "devDependencies": {
-    "html2canvas": "^1.0.0-alpha.4",
     "autoprefixer": "^7.1.6",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -29,6 +28,7 @@
     "extract-text-webpack-plugin": "^3.0.0-rc.2",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
+    "html2canvas": "^1.0.0-alpha.4",
     "juicer": "^0.6.15",
     "juicer-loader": "0.0.5",
     "less": "^2.7.3",

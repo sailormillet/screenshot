@@ -39,7 +39,7 @@ module.exports = (paramObj) => {
    */
 
   // obj.devtool = 'cheap-module-source-map';
-  obj.devtool = 'source-map';
+  // obj.devtool = 'source-map';
   // obj.devtool = 'hidden-source-map';
 
   /**

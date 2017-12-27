@@ -1,0 +1,18 @@
+<canvas id="stockGraph" width="750" height="1206" >
+    您的浏览器不支持 HTML5 canvas 标签.
+</canvas>
+<div class="main">
+    <img id="topbg" src="//127.0.0.1:8080/img/canvas/bag.png" alt="">
+    <div class="content">
+        <p>December 27,2017</p>
+        <p>hello everybody,</p>
+        <p>I'm Millet,this is my first canvas demo,This demo uses Canvas to draw a picture and use html2canvas to screenshot a picture<br/></p>
+
+    </div>
+
+</div>
+<!--</canvas>-->
+
+<!--<canvas id="clock" width="150" height="150">-->
+    <!--<img src="//127.0.0.1:8080/img/canvas/main.png" width="150" height="150" alt=""/>-->
+<!--</canvas>-->

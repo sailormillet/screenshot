@@ -1,5 +1,10 @@
 # canvas
 
+### 本案例的压缩方式
+- 如果全局的webpack是3.8.1的话就直接执行:webpack --config webpack.canvas.conf.js
+
+- 如果不是全局 在/src/canvas/下执行: ../../node_modules/.bin/webpack --config webpack.conf.main.js
+
 # html2canvas 截图demo
 
 > 生成的图片的样子
