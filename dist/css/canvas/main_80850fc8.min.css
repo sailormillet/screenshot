@@ -1,10 +1,15 @@
-/*! millet Creation Time : Wed Dec 27 2017 19:00:32 GMT+0800 (CST) */
+/*! millet Creation Time : Mon Jan 22 2018 11:17:16 GMT+0800 (CST) */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
 body {
-  width: 100%;
   margin: 0;
   overflow: hidden;
 }
 .main {
+  display: none;
   position: absolute;
   width: auto;
   left: .1rem;
@@ -23,7 +28,6 @@ body {
   margin: 0;
   font-size: 16px;
   font-weight: 400;
-  text-indent: 1em;
   text-align: justify;
 }
 .main .content p:first-child {

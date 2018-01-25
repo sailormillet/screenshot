@@ -1,0 +1,10 @@
+/*! millet Creation Time : Tue Jan 23 2018 18:11:41 GMT+0800 (CST) */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+}

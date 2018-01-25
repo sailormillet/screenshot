@@ -1,12 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+html{
+  // height: 100%;
+  // overflow: hidden;
+}
 body{
-  width: 100%;
   margin: 0;
   overflow: hidden;
 }
 canvas{
-  //visibility:hidden;
+  // visibility: hidden;
 }
 .main{
+  display:none;
   position: absolute;
   width: auto;
   left: .1rem;
@@ -14,6 +23,7 @@ canvas{
   top: .1rem;
   height: 100%;
   overflow: hidden;
+ 
   img{
     width: 100%;
 
@@ -24,7 +34,7 @@ canvas{
       margin: 0;
       font-size: 16px;
       font-weight: 400;
-      text-indent: 1em;
+      // text-indent: 1em;
       text-align: justify;
     }
     p:first-child{
